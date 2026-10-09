@@ -22,11 +22,12 @@ export const temas = [
   { id: 'retratos',           pt: 'Retratos',             en: 'Portraits' },
 ] as const;
 
-// Fotos da capa: tema + número da foto (01, 02…) — passam em sequência, devagar
+// Fotos da capa (nome do arquivo original) — passam em sequência, devagar.
+// "foco" diz que parte da foto fica visível no celular (ex.: '50% 50%' = centro).
 export const capa = [
-  { tema: 'autoral', id: '01' },
-  { tema: 'autoral', id: '02' },
-  { tema: 'autoral', id: '03' },
+  { tema: 'autoral', original: '_DSC2006_danielpinheiro©.jpg', foco: '45% 50%' },
+  { tema: 'autoral', original: '_DSF3798_danielpinheiro©.jpg', foco: '62% 50%' },
+  { tema: 'autoral', original: 'DSC_0080_danielpinheiro©.jpg', foco: '50% 50%' },
 ];
 
 export const clientes = [

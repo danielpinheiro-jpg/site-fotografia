@@ -21,7 +21,10 @@ const src = (tema: string, id: string, w: number) => `/fotos/${tema}/${id}-${w}.
 const srcset = (tema: string, id: string) =>
   [800, 1600, 2400].map((w) => `${src(tema, id, w)} ${w}w`).join(', ');
 
-const fotosCapa = capa.filter((c) => lista[c.tema]?.some((f) => f.id === c.id));
+const fotosCapa = capa.flatMap((c) => {
+  const f = lista[c.tema]?.find((x) => x.original === c.original);
+  return f ? [{ tema: c.tema, id: f.id, foco: c.foco }] : [];
+});
 const ogImagem = fotosCapa[0] ? new URL(src(fotosCapa[0].tema, fotosCapa[0].id, 1600), site).toString() : undefined;
 
 const nav = [
@@ -112,6 +115,7 @@ const ano = new Date().getFullYear();
           sizes="100vw"
           src={src(c.tema, c.id, 1600)}
           alt=""
+          style={`object-position:${c.foco}`}
           fetchpriority={i === 0 ? 'high' : 'low'}
           loading={i === 0 ? 'eager' : 'lazy'}
           decoding="async"

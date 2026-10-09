@@ -1,7 +1,546 @@
 {
-  "autoral": [],
-  "moda-joias": [],
-  "arquitetura-hoteis": [],
-  "publicidade": [],
-  "retratos": []
+  "autoral": [
+    {
+      "id": "01",
+      "w": 2500,
+      "h": 1690,
+      "original": "RIO 08_danielpinheiro©.jpg"
+    },
+    {
+      "id": "02",
+      "w": 2500,
+      "h": 1654,
+      "original": "1286_Mar_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "03",
+      "w": 2500,
+      "h": 2500,
+      "original": "1598_Negativo05_80x80_danielpinheiro©.jpg"
+    },
+    {
+      "id": "04",
+      "w": 2500,
+      "h": 2500,
+      "original": "1598_Negativo07_80x80_danielpinheiro©.jpg"
+    },
+    {
+      "id": "05",
+      "w": 2500,
+      "h": 2500,
+      "original": "1598_Negativo10_80x80_danielpinheiro©.jpg"
+    },
+    {
+      "id": "06",
+      "w": 2500,
+      "h": 1706,
+      "original": "BARCELONA CASAL_danielpinheiro©.jpg"
+    },
+    {
+      "id": "07",
+      "w": 2500,
+      "h": 1631,
+      "original": "Bahia_print _c1_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "08",
+      "w": 2500,
+      "h": 1599,
+      "original": "DPN1286_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "09",
+      "w": 2500,
+      "h": 1674,
+      "original": "DSC_0080_danielpinheiro©.jpg"
+    },
+    {
+      "id": "10",
+      "w": 2394,
+      "h": 2500,
+      "original": "Daniel Pinheiro-3655 2_danielpinheiro©.jpg"
+    },
+    {
+      "id": "11",
+      "w": 2483,
+      "h": 2500,
+      "original": "DanielPinheiro-7271_danielpinheiro©.jpg"
+    },
+    {
+      "id": "12",
+      "w": 2500,
+      "h": 1680,
+      "original": "MARESIAS _danielpinheiro©.jpg"
+    },
+    {
+      "id": "13",
+      "w": 2459,
+      "h": 2500,
+      "original": "Sonhacao_danielpinheiro©01_danielpinheiro©.jpg"
+    },
+    {
+      "id": "14",
+      "w": 2500,
+      "h": 1664,
+      "original": "_DPN2626_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "15",
+      "w": 2500,
+      "h": 1664,
+      "original": "_DPN2840_asas_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "16",
+      "w": 2500,
+      "h": 1601,
+      "original": "_DSC2006_danielpinheiro©.jpg"
+    },
+    {
+      "id": "17",
+      "w": 2500,
+      "h": 1581,
+      "original": "_DSF3798_danielpinheiro©.jpg"
+    },
+    {
+      "id": "18",
+      "w": 2500,
+      "h": 2500,
+      "original": "img20260617_17191878_danielpinheiro©.jpg"
+    },
+    {
+      "id": "19",
+      "w": 2500,
+      "h": 2486,
+      "original": "mangui_danielpinheiro©.jpg"
+    },
+    {
+      "id": "20",
+      "w": 2500,
+      "h": 2463,
+      "original": "sanfona_2B_danielpinheiro©_danielpinheiro©.jpg"
+    }
+  ],
+  "moda-joias": [
+    {
+      "id": "01",
+      "w": 2500,
+      "h": 1664,
+      "original": "0936_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "02",
+      "w": 2500,
+      "h": 1664,
+      "original": "0964_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "03",
+      "w": 2500,
+      "h": 1664,
+      "original": "1410_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "04",
+      "w": 2500,
+      "h": 1664,
+      "original": "DP_lisht-02_danielpinheiro©.jpg"
+    },
+    {
+      "id": "05",
+      "w": 2500,
+      "h": 2500,
+      "original": "DanielPinheiro-000001-Edit_danielpinheiro©.jpg"
+    },
+    {
+      "id": "06",
+      "w": 2500,
+      "h": 1663,
+      "original": "LISHT 0009_danielpinheiro©.jpg"
+    },
+    {
+      "id": "07",
+      "w": 2500,
+      "h": 1664,
+      "original": "Rev Oi 1_danielpinheiro©.jpg"
+    },
+    {
+      "id": "08",
+      "w": 2500,
+      "h": 1664,
+      "original": "_DPN0930 ok_danielpinheiro©.jpg"
+    },
+    {
+      "id": "09",
+      "w": 2500,
+      "h": 1664,
+      "original": "_DPN9712_1_danielpinheiro©.jpg"
+    },
+    {
+      "id": "10",
+      "w": 1667,
+      "h": 2500,
+      "original": "_DSC3251_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "11",
+      "w": 1667,
+      "h": 2500,
+      "original": "_DSC3260_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "12",
+      "w": 1667,
+      "h": 2500,
+      "original": "_DSC3276_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "13",
+      "w": 1940,
+      "h": 2500,
+      "original": "_DSC3606_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "14",
+      "w": 1796,
+      "h": 2500,
+      "original": "_DSC3614_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "15",
+      "w": 1796,
+      "h": 2500,
+      "original": "_DSC3617_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "16",
+      "w": 2500,
+      "h": 1818,
+      "original": "capa2_danielpinheiro©.jpg"
+    },
+    {
+      "id": "17",
+      "w": 2471,
+      "h": 2500,
+      "original": "daniel_6_danielpinheiro©.jpg"
+    },
+    {
+      "id": "18",
+      "w": 2500,
+      "h": 1944,
+      "original": "daniel_pinheiro001_danielpinheiro©.jpg"
+    },
+    {
+      "id": "19",
+      "w": 2500,
+      "h": 1944,
+      "original": "daniel_pinheiro003_danielpinheiro©.jpg"
+    },
+    {
+      "id": "20",
+      "w": 2500,
+      "h": 1944,
+      "original": "daniel_pinheiro008_danielpinheiro©.jpg"
+    },
+    {
+      "id": "21",
+      "w": 2500,
+      "h": 1944,
+      "original": "daniel_pinheiro009_danielpinheiro©.jpg"
+    },
+    {
+      "id": "22",
+      "w": 2500,
+      "h": 1944,
+      "original": "daniel_pinheiro010_danielpinheiro©.jpg"
+    },
+    {
+      "id": "23",
+      "w": 2500,
+      "h": 1668,
+      "original": "elegtrop0_danielpinheiro©.jpg"
+    },
+    {
+      "id": "24",
+      "w": 2033,
+      "h": 2500,
+      "original": "foto01 frente postal_danielpinheiro©.jpg"
+    },
+    {
+      "id": "25",
+      "w": 2452,
+      "h": 2500,
+      "original": "gisele13_danielpinheiro©.jpg"
+    },
+    {
+      "id": "26",
+      "w": 2500,
+      "h": 1677,
+      "original": "gisele14_danielpinheiro©.jpg"
+    },
+    {
+      "id": "27",
+      "w": 1668,
+      "h": 2500,
+      "original": "gisele1_danielpinheiro©.jpg"
+    },
+    {
+      "id": "28",
+      "w": 2486,
+      "h": 2500,
+      "original": "pasargada_danielpinheiro©_9_danielpinheiro©.jpg"
+    },
+    {
+      "id": "29",
+      "w": 2252,
+      "h": 2500,
+      "original": "perola_dp_danielpinheiro©.jpg"
+    },
+    {
+      "id": "30",
+      "w": 2500,
+      "h": 2168,
+      "original": "vero_praia08_danielpinheiro©.jpg"
+    }
+  ],
+  "arquitetura-hoteis": [
+    {
+      "id": "01",
+      "w": 2500,
+      "h": 1679,
+      "original": "DP05069_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "02",
+      "w": 2500,
+      "h": 1692,
+      "original": "0012_Fasano Rio_danielpinheiro©_III_danielpinheiro©.jpg"
+    },
+    {
+      "id": "03",
+      "w": 2500,
+      "h": 1669,
+      "original": "DP04178_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "04",
+      "w": 2500,
+      "h": 1777,
+      "original": "_DP00149_Fasano Angra dos Reis_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "05",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP00440_Fasano Angra dos Reis_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "06",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP00468_Fasano Angra dos Reis_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "07",
+      "w": 2500,
+      "h": 1457,
+      "original": "_DP01219_Fasano Rio_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "08",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP03302_Novotel Cusco_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "09",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP04144_danielpinheiro©.jpg"
+    },
+    {
+      "id": "10",
+      "w": 2500,
+      "h": 1669,
+      "original": "_DP05753_fasano_danielpinheiro@_danielpinheiro©.jpg"
+    },
+    {
+      "id": "11",
+      "w": 2500,
+      "h": 1669,
+      "original": "_DP05883_fasano_danielpinheiro@_danielpinheiro©.jpg"
+    },
+    {
+      "id": "12",
+      "w": 1668,
+      "h": 2500,
+      "original": "_DP06229_Casas & Abra_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "13",
+      "w": 2500,
+      "h": 1624,
+      "original": "_DP06859_fasano_laspiedras_danielpinheiro@_danielpinheiro©.jpg"
+    },
+    {
+      "id": "14",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP07643_Ibis Cacun_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "15",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP08662_Ibis Los Mochis_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "16",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP09264_Abracadabra_danielpinheiro@ 2_danielpinheiro©.jpg"
+    },
+    {
+      "id": "17",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP09546_CasasBrancas_danielpinheiro@_danielpinheiro©.jpg"
+    },
+    {
+      "id": "18",
+      "w": 1668,
+      "h": 2500,
+      "original": "_DP09735_CasasBrancas_danielpinheiro@_danielpinheiro©.jpg"
+    },
+    {
+      "id": "19",
+      "w": 2500,
+      "h": 1667,
+      "original": "_DSC2948_fasano_danielpinheiro@_danielpinheiro©.jpg"
+    },
+    {
+      "id": "20",
+      "w": 2500,
+      "h": 1667,
+      "original": "_DSC9334_fasano_laspiedras_danielpinheiro@_danielpinheiro©.jpg"
+    }
+  ],
+  "publicidade": [
+    {
+      "id": "01",
+      "w": 2500,
+      "h": 1669,
+      "original": "DP_Natura_Corpo-4215__danielpinheiro©.jpg"
+    },
+    {
+      "id": "02",
+      "w": 2500,
+      "h": 1669,
+      "original": "DP04823_WELLA_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "03",
+      "w": 2500,
+      "h": 2305,
+      "original": "DanielPinheiro_1000235_danielpinheiro©.jpg"
+    },
+    {
+      "id": "04",
+      "w": 2500,
+      "h": 1669,
+      "original": "_DP01191_melitta_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "05",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP02091_msd_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "06",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DP04236_Raia_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "07",
+      "w": 2500,
+      "h": 1738,
+      "original": "_DP07032_novaescola_danielpinheiro© copy_danielpinheiro©.jpg"
+    },
+    {
+      "id": "08",
+      "w": 2500,
+      "h": 1668,
+      "original": "_DPN8454_danielpinheiro©.jpg"
+    },
+    {
+      "id": "09",
+      "w": 2500,
+      "h": 1668,
+      "original": "cacaushow_1NAMORADOS SEXY_1360_danielpinheiro©.jpg"
+    },
+    {
+      "id": "10",
+      "w": 2500,
+      "h": 1668,
+      "original": "cacaushow_2NAMORADOS CARINHO_1484_danielpinheiro©.jpg"
+    }
+  ],
+  "retratos": [
+    {
+      "id": "01",
+      "w": 2500,
+      "h": 1668,
+      "original": "09192_cris_danielpinheiro©.jpg"
+    },
+    {
+      "id": "02",
+      "w": 2500,
+      "h": 1664,
+      "original": "0114_serafina_danielpinheiro©.jpg"
+    },
+    {
+      "id": "03",
+      "w": 2500,
+      "h": 1636,
+      "original": "02_danielpinheiro©.jpg"
+    },
+    {
+      "id": "04",
+      "w": 2473,
+      "h": 2500,
+      "original": "12_danielpinheiro©.jpg"
+    },
+    {
+      "id": "05",
+      "w": 2484,
+      "h": 2500,
+      "original": "MariaClara_Carol_danielpinheiro©.jpg"
+    },
+    {
+      "id": "06",
+      "w": 2500,
+      "h": 1543,
+      "original": "_DP07961_catarina_danielpinheiro©.jpg"
+    },
+    {
+      "id": "07",
+      "w": 1745,
+      "h": 2500,
+      "original": "_DPN2059_danielpinheiro©.jpg"
+    },
+    {
+      "id": "08",
+      "w": 2500,
+      "h": 1694,
+      "original": "_DPN5517_danielpinheiro©.jpg"
+    },
+    {
+      "id": "09",
+      "w": 2500,
+      "h": 1664,
+      "original": "tenda_danielpinheiro©-2_danielpinheiro©.jpg"
+    }
+  ]
 }
