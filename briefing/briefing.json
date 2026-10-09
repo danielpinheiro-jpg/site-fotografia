@@ -11,9 +11,20 @@
   ],
   "fundo": "claro / branco",
   "marca": {
-    "logo": "DANIEL PINHEIRO em cinza, com o P em moldura salmão (ver bio-daniel-pinheiro.webp)",
-    "cinza": "#808080",
-    "salmao": "#F58E91"
+    "logo": "Monograma LP (L e P vermelhos com cantoneira de enquadramento) + wordmark DANIEL[LP]INHEIRO em preto",
+    "arquivos": [
+      "briefing/marca/logo-vertical.jpg",
+      "briefing/marca/logo-vertical-pequeno.jpg",
+      "briefing/marca/padrao-listras-vermelho.jpg",
+      "briefing/marca/padrao-listras-grafite.jpg",
+      "briefing/marca/padrao-listras-misto.jpg"
+    ],
+    "vermelho": "#E22126",
+    "vermelhoTela": "#FF0300",
+    "grafite": "#393A3C",
+    "preto": "#000000",
+    "padrao": "listras verticais que viram diagonais, com o monograma LP vazado",
+    "obs": "salmão da bio era o vermelho desbotado na exportação — cor oficial é o vermelho"
   },
   "ordemSecoes": [
     "Capa (foto em tela cheia + nome)",
