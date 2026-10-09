@@ -1,0 +1,253 @@
+---
+/*
+  A página inteira (o site é uma página só), montada no idioma pedido.
+  Ordem: Capa → temas de fotos → Clientes → Sobre → Contato → Rodapé.
+*/
+import '../styles/global.css';
+import assinatura from '../../public/marca/assinatura.svg?raw';
+import fotos from '../data/fotos.json';
+import { capa, clientes, contato, temas, textos, type Lang } from '../data/conteudo';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = textos[lang];
+const site = Astro.site!;
+const urlPt = new URL('/', site).toString();
+const urlEn = new URL('/en/', site).toString();
+
+type Foto = { id: string; w: number; h: number; original: string };
+const lista = fotos as Record<string, Foto[]>;
+const src = (tema: string, id: string, w: number) => `/fotos/${tema}/${id}-${w}.webp`;
+const srcset = (tema: string, id: string) =>
+  [800, 1600, 2400].map((w) => `${src(tema, id, w)} ${w}w`).join(', ');
+
+const fotosCapa = capa.filter((c) => lista[c.tema]?.some((f) => f.id === c.id));
+const ogImagem = fotosCapa[0] ? new URL(src(fotosCapa[0].tema, fotosCapa[0].id, 1600), site).toString() : undefined;
+
+const nav = [
+  ...temas.map((tema, i) => ({ href: `#${tema.id}`, label: tema[lang], n: String(i + 1).padStart(2, '0') })),
+  { href: '#sobre', label: t.sobre, n: String(temas.length + 1).padStart(2, '0') },
+  { href: '#contato', label: t.contato, n: String(temas.length + 2).padStart(2, '0') },
+];
+const ano = new Date().getFullYear();
+---
+<!doctype html>
+<html lang={t.htmlLang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.titulo}</title>
+    <meta name="description" content={t.descricao} />
+    <link rel="canonical" href={lang === 'pt' ? urlPt : urlEn} />
+    <link rel="alternate" hreflang="pt-BR" href={urlPt} />
+    <link rel="alternate" hreflang="en" href={urlEn} />
+    <link rel="alternate" hreflang="x-default" href={urlPt} />
+    <link rel="icon" type="image/svg+xml" href="/marca/favicon.svg" />
+    <meta name="theme-color" content="#FFFFFF" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={t.titulo} />
+    <meta property="og:description" content={t.descricao} />
+    <meta property="og:url" content={lang === 'pt' ? urlPt : urlEn} />
+    <meta property="og:locale" content={lang === 'pt' ? 'pt_BR' : 'en_US'} />
+    {ogImagem && <meta property="og:image" content={ogImagem} />}
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..600;1,300..400&display=swap" rel="stylesheet" />
+    {fotosCapa[0] && (
+      <link rel="preload" as="image" imagesrcset={srcset(fotosCapa[0].tema, fotosCapa[0].id)} imagesizes="100vw" />
+    )}
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Person',
+      name: 'Daniel Pinheiro',
+      jobTitle: lang === 'pt' ? 'Fotógrafo' : 'Photographer',
+      email: `mailto:${contato.email}`,
+      url: urlPt,
+      sameAs: [contato.instagramLink],
+    })} />
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">{t.pular}</a>
+
+    <header class="topo sobre-capa" data-topo>
+      <div class="topo__barra">
+        <a class="topo__marca" href="#topo" aria-label="Daniel Pinheiro">
+          <Fragment set:html={assinatura} />
+        </a>
+        <div class="topo__direita" style="display:flex;align-items:center">
+          <nav class="topo__nav rotulo" aria-label="Menu">
+            {nav.map((item) => <a href={item.href} data-nav>{item.label}</a>)}
+          </nav>
+          <div class="idioma rotulo">
+            <a href="/" hreflang="pt-BR" lang="pt-BR" aria-current={lang === 'pt' ? 'page' : undefined}>PT</a>
+            <a href="/en/" hreflang="en" lang="en" aria-current={lang === 'en' ? 'page' : undefined}>EN</a>
+          </div>
+          <button class="topo__abrir rotulo" type="button" aria-controls="menu-movel" aria-expanded="false" data-abrir-menu>
+            {t.menu}
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="menu-movel" id="menu-movel" data-menu hidden>
+      <div class="menu-movel__topo">
+        <Fragment set:html={assinatura} />
+        <button class="rotulo" type="button" data-fechar-menu>{t.fechar}</button>
+      </div>
+      <nav aria-label="Menu">
+        {nav.map((item) => <a href={item.href} data-fechar-menu><span>{item.n}</span>{item.label}</a>)}
+      </nav>
+      <div class="idioma rotulo">
+        <a href="/" aria-current={lang === 'pt' ? 'page' : undefined}>Português</a>
+        <a href="/en/" aria-current={lang === 'en' ? 'page' : undefined}>English</a>
+      </div>
+    </div>
+
+    <section class="capa" id="topo" data-capa>
+      {fotosCapa.map((c, i) => (
+        <img
+          class={`capa__foto${i === 0 ? ' ativa' : ''}`}
+          srcset={srcset(c.tema, c.id)}
+          sizes="100vw"
+          src={src(c.tema, c.id, 1600)}
+          alt=""
+          fetchpriority={i === 0 ? 'high' : 'low'}
+          loading={i === 0 ? 'eager' : 'lazy'}
+          decoding="async"
+        />
+      ))}
+      <div class="capa__nome">
+        <h1>
+          <span class="sr-only">Daniel Pinheiro — {t.capaLegenda}</span>
+          <span aria-hidden="true"><Fragment set:html={assinatura} /></span>
+        </h1>
+        <a class="capa__rolar rotulo" href={`#${temas[0].id}`}>{temas[0][lang]}</a>
+      </div>
+    </section>
+
+    <main id="conteudo">
+      {temas.map((tema, i) => {
+        const itens = lista[tema.id] ?? [];
+        return (
+          <section class="secao" id={tema.id} aria-labelledby={`t-${tema.id}`}>
+            <div class="secao__cabeca surgir">
+              <h2 class="secao__titulo" id={`t-${tema.id}`}>
+                <span class="secao__numero">{String(i + 1).padStart(2, '0')}</span>
+                {tema[lang]}
+              </h2>
+              <span class="secao__conta rotulo">{itens.length} {t.fotos}</span>
+            </div>
+            <ul class="galeria" data-galeria={tema.id}>
+              {itens.map((f, n) => (
+                <li
+                  class={`galeria__item surgir${n === 0 ? ' galeria__item--abertura' : ''}`}
+                  style={`--r:${(f.w / f.h).toFixed(4)}`}
+                >
+                  <button
+                    type="button"
+                    class="galeria__botao"
+                    data-foto={src(tema.id, f.id, 2400)}
+                    data-srcset={srcset(tema.id, f.id)}
+                    aria-label={`${t.verFoto} ${n + 1} — ${tema[lang]}`}
+                    style="display:block;width:100%"
+                  >
+                    <img
+                      srcset={srcset(tema.id, f.id)}
+                      sizes={n === 0 ? '100vw' : '(max-width: 640px) 50vw, 33vw'}
+                      src={src(tema.id, f.id, 800)}
+                      width={f.w}
+                      height={f.h}
+                      alt={t.altFoto(tema[lang], n + 1)}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </section>
+        );
+      })}
+
+      <section class="clientes" aria-labelledby="t-clientes">
+        <h2 class="clientes__titulo rotulo" id="t-clientes">{t.clientes}</h2>
+        <div class="clientes__faixa">
+          <ul>{clientes.map((c) => <li>{c}</li>)}</ul>
+          <ul aria-hidden="true">{clientes.map((c) => <li>{c}</li>)}</ul>
+        </div>
+      </section>
+
+      <section class="secao" id="sobre" aria-labelledby="t-sobre">
+        <div class="secao__cabeca surgir">
+          <h2 class="secao__titulo" id="t-sobre">
+            <span class="secao__numero">{String(temas.length + 1).padStart(2, '0')}</span>
+            {t.sobre}
+          </h2>
+        </div>
+        <div class="sobre">
+          <figure class="sobre__retrato surgir" style="margin:0">
+            <img src="/marca/retrato.webp" width="1200" height="1195" alt={t.retratoAlt} loading="lazy" decoding="async" />
+          </figure>
+          <div class="sobre__texto surgir">
+            <p class="sobre__abertura">{t.bioAbertura}</p>
+            {t.bio.map((p) => <p>{p}</p>)}
+          </div>
+        </div>
+      </section>
+
+      <section class="secao" id="contato" aria-labelledby="t-contato">
+        <div class="secao__cabeca surgir">
+          <h2 class="secao__titulo rotulo" style="font-size:0.75rem;letter-spacing:0.18em">
+            <span class="secao__numero" style="transform:none">{String(temas.length + 2).padStart(2, '0')}</span>
+            {t.contato}
+          </h2>
+        </div>
+        <div class="contato">
+          <div class="surgir">
+            <p class="contato__titulo" id="t-contato">{t.contatoTitulo}</p>
+            <p class="contato__texto">{t.contatoTexto}</p>
+          </div>
+          <ul class="contato__lista surgir">
+            <li><a href={`mailto:${contato.email}`}><span class="rotulo">E-mail</span>{contato.email}</a></li>
+            <li><a href={contato.whatsappLink} target="_blank" rel="noopener"><span class="rotulo">WhatsApp</span>{contato.whatsapp}</a></li>
+            <li><a href={contato.instagramLink} target="_blank" rel="noopener"><span class="rotulo">Instagram</span>{contato.instagram}</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <div class="listras" aria-hidden="true">
+        <img src="/marca/listras.svg" alt="" width="1612" height="1000" loading="lazy" decoding="async" />
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <p>© {ano} Daniel Pinheiro · {t.direitos}</p>
+      <div class="rodape__links">
+        <a href={`mailto:${contato.email}`}>E-mail</a>
+        <a href={contato.whatsappLink} target="_blank" rel="noopener">WhatsApp</a>
+        <a href={contato.instagramLink} target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </footer>
+
+    <dialog class="visor" data-visor aria-label={t.verFoto}>
+      <div class="visor__topo">
+        <span class="rotulo" data-visor-tema></span>
+        <button class="rotulo" type="button" data-visor-fechar>{t.fechar} ✕</button>
+      </div>
+      <div class="visor__palco" data-visor-palco tabindex="-1" autofocus>
+        <button class="visor__seta visor__seta--ant" type="button" aria-label={t.anterior} data-visor-ant>←</button>
+        <img alt="" data-visor-img />
+        <button class="visor__seta visor__seta--prox" type="button" aria-label={t.proxima} data-visor-prox>→</button>
+      </div>
+      <div class="visor__base rotulo">
+        <span class="visor__conta" data-visor-conta></span>
+        <span>© Daniel Pinheiro</span>
+      </div>
+    </dialog>
+
+    <script>
+      import '../scripts/interacoes';
+    </script>
+  </body>
+</html>
