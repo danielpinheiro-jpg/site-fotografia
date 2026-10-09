@@ -5,7 +5,10 @@
   "imagens": "fotos próprias do fotógrafo (sem geração por IA)",
   "origemFotos": "/P H O T O S/PORTFOLIOS DANIEL/edicao novo site_JPGS_LOW (Dropbox)",
   "assinatura": "Daniel Pinheiro",
-  "idiomas": ["pt-BR", "en"],
+  "idiomas": [
+    "pt-BR",
+    "en"
+  ],
   "fundo": "claro / branco",
   "marca": {
     "logo": "DANIEL PINHEIRO em cinza, com o P em moldura salmão (ver bio-daniel-pinheiro.webp)",
@@ -24,7 +27,7 @@
   "contato": {
     "email": "daniel.pinheiro@me.com",
     "whatsapp": "+55 11 98346-3830",
-    "instagram": null
+    "instagram": "@daniel_pinheiro_photography"
   },
   "bio": {
     "linhaAbertura": "Daniel Pinheiro (1971, São Paulo, SP)",
@@ -33,13 +36,14 @@
       "Sua assinatura está na luz natural, nas cores, nas texturas e na construção de imagens que revelam presença antes de espetáculo. Mais do que registrar cenas, Daniel busca criar fotografias que permaneçam relevantes com o passar do tempo, unindo precisão técnica, sensibilidade artística e narrativa visual.",
       "Hoje, reúne em uma única marca pessoal a experiência construída ao longo de mais de duas décadas de atuação, desenvolvendo projetos nas áreas de fotografia editorial, publicidade, arquitetura, hotelaria, gastronomia, retratos, documentário e fine art. Seu olhar permanece o mesmo, independentemente do cenário: encontrar a beleza, a verdade e a dignidade presentes em cada história."
     ],
-    "retrato": "recorte P&B da imagem de bio (baixa resolução — pedir versão maior)"
+    "retrato": "briefing/retrato-daniel-pinheiro.jpg (colorido, alta resolução; no site pode ir em P&B como no cartão de bio)"
   },
   "inventarioFotos": {
     "Autoral": 20,
     "Moda & Joias": 30,
     "Arquitetura & Hotéis": 20,
     "Publicidade": 10,
-    "Retratos": 9
+    "Retratos": 9,
+    "total": 89
   }
 }
