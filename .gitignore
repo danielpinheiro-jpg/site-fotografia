@@ -1,0 +1,4 @@
+fotos-originais/
+node_modules/
+dist/
+.astro/

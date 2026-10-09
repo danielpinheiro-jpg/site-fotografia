@@ -1,0 +1,45 @@
+{
+  "projeto": "Daniel Pinheiro — portfólio",
+  "proposito": "portfolio",
+  "kit": "portfolio-editorial",
+  "imagens": "fotos próprias do fotógrafo (sem geração por IA)",
+  "origemFotos": "/P H O T O S/PORTFOLIOS DANIEL/edicao novo site_JPGS_LOW (Dropbox)",
+  "assinatura": "Daniel Pinheiro",
+  "idiomas": ["pt-BR", "en"],
+  "fundo": "claro / branco",
+  "marca": {
+    "logo": "DANIEL PINHEIRO em cinza, com o P em moldura salmão (ver bio-daniel-pinheiro.webp)",
+    "cinza": "#808080",
+    "salmao": "#F58E91"
+  },
+  "ordemSecoes": [
+    "Capa (foto em tela cheia + nome)",
+    "Autoral",
+    "Moda & Joias",
+    "Arquitetura & Hotéis",
+    "Publicidade",
+    "Retratos",
+    "Sobre / Contato"
+  ],
+  "contato": {
+    "email": "daniel.pinheiro@me.com",
+    "whatsapp": "+55 11 98346-3830",
+    "instagram": null
+  },
+  "bio": {
+    "linhaAbertura": "Daniel Pinheiro (1971, São Paulo, SP)",
+    "texto": [
+      "Há mais de vinte anos, Daniel Pinheiro transforma luz em narrativa. Sua fotografia nasceu do encontro com o mestre Walter Firmo e se desenvolveu entre os retratos, a publicidade, a moda, a arquitetura, a gastronomia e os projetos documentais. Ao longo dessa trajetória, fotografou para marcas, revistas e instituições nacionais e internacionais, realizou exposições autorais e dirigiu a fotografia de filmes documentais, sempre mantendo um princípio que atravessa todo o seu trabalho: fotografar pessoas, lugares e objetos com o mesmo rigor estético e o mesmo respeito pelo que cada imagem representa.",
+      "Sua assinatura está na luz natural, nas cores, nas texturas e na construção de imagens que revelam presença antes de espetáculo. Mais do que registrar cenas, Daniel busca criar fotografias que permaneçam relevantes com o passar do tempo, unindo precisão técnica, sensibilidade artística e narrativa visual.",
+      "Hoje, reúne em uma única marca pessoal a experiência construída ao longo de mais de duas décadas de atuação, desenvolvendo projetos nas áreas de fotografia editorial, publicidade, arquitetura, hotelaria, gastronomia, retratos, documentário e fine art. Seu olhar permanece o mesmo, independentemente do cenário: encontrar a beleza, a verdade e a dignidade presentes em cada história."
+    ],
+    "retrato": "recorte P&B da imagem de bio (baixa resolução — pedir versão maior)"
+  },
+  "inventarioFotos": {
+    "Autoral": 20,
+    "Moda & Joias": 30,
+    "Arquitetura & Hotéis": 20,
+    "Publicidade": 10,
+    "Retratos": 9
+  }
+}
