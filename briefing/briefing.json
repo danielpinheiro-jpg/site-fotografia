@@ -21,10 +21,10 @@
     ],
     "vermelho": "#E22126",
     "vermelhoTela": "#FF0300",
-    "grafite": "#393A3C",
     "preto": "#000000",
     "padrao": "listras verticais que viram diagonais, com o monograma LP vazado",
-    "obs": "salmão da bio era o vermelho desbotado na exportação — cor oficial é o vermelho"
+    "obs": "salmão/cinza da imagem de bio eram cores desbotadas na exportação — oficiais: vermelho + preto + branco",
+    "cores": "vermelho, preto e branco — sem cinza (o tom escuro dos padrões de listras é o preto da marca)"
   },
   "ordemSecoes": [
     "Capa (foto em tela cheia + nome)",
