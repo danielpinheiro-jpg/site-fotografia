@@ -289,11 +289,11 @@ ul { padding: 0; list-style: none; }
 
 /* ── ENTRADA SUAVE ── */
 
-.surgir { opacity: 0; transform: translateY(1.5rem); transition: opacity 1s var(--ease), transform 1s var(--ease); }
-.surgir.visivel { opacity: 1; transform: none; }
+.surgir { transform: translateY(1.5rem); transition: transform 1s var(--ease); }
+.surgir.visivel { transform: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: 0.01ms !important; }
-  .surgir { opacity: 1; transform: none; }
+  .surgir { transform: none; }
 }
