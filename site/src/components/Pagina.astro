@@ -12,12 +12,14 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = textos[lang];
 const site = Astro.site!;
-const urlPt = new URL('/', site).toString();
-const urlEn = new URL('/en/', site).toString();
+// Prefixo do endereço (vazio no domínio próprio; '/site-fotografia' na prévia do GitHub)
+const b = import.meta.env.BASE_URL.replace(/\/$/, '');
+const urlPt = new URL(`${b}/`, site).toString();
+const urlEn = new URL(`${b}/en/`, site).toString();
 
 type Foto = { id: string; w: number; h: number; original: string };
 const lista = fotos as Record<string, Foto[]>;
-const src = (tema: string, id: string, w: number) => `/fotos/${tema}/${id}-${w}.webp`;
+const src = (tema: string, id: string, w: number) => `${b}/fotos/${tema}/${id}-${w}.webp`;
 const srcset = (tema: string, id: string) =>
   [800, 1600, 2400].map((w) => `${src(tema, id, w)} ${w}w`).join(', ');
 
@@ -45,7 +47,7 @@ const ano = new Date().getFullYear();
     <link rel="alternate" hreflang="pt-BR" href={urlPt} />
     <link rel="alternate" hreflang="en" href={urlEn} />
     <link rel="alternate" hreflang="x-default" href={urlPt} />
-    <link rel="icon" type="image/svg+xml" href="/marca/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href={`${b}/marca/favicon.svg`} />
     <meta name="theme-color" content="#FFFFFF" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={t.titulo} />
@@ -83,8 +85,8 @@ const ano = new Date().getFullYear();
             {nav.map((item) => <a href={item.href} data-nav>{item.label}</a>)}
           </nav>
           <div class="idioma rotulo">
-            <a href="/" hreflang="pt-BR" lang="pt-BR" aria-current={lang === 'pt' ? 'page' : undefined}>PT</a>
-            <a href="/en/" hreflang="en" lang="en" aria-current={lang === 'en' ? 'page' : undefined}>EN</a>
+            <a href={`${b}/`} hreflang="pt-BR" lang="pt-BR" aria-current={lang === 'pt' ? 'page' : undefined}>PT</a>
+            <a href={`${b}/en/`} hreflang="en" lang="en" aria-current={lang === 'en' ? 'page' : undefined}>EN</a>
           </div>
           <button class="topo__abrir rotulo" type="button" aria-controls="menu-movel" aria-expanded="false" data-abrir-menu>
             {t.menu}
@@ -102,8 +104,8 @@ const ano = new Date().getFullYear();
         {nav.map((item) => <a href={item.href} data-fechar-menu><span>{item.n}</span>{item.label}</a>)}
       </nav>
       <div class="idioma rotulo">
-        <a href="/" aria-current={lang === 'pt' ? 'page' : undefined}>Português</a>
-        <a href="/en/" aria-current={lang === 'en' ? 'page' : undefined}>English</a>
+        <a href={`${b}/`} aria-current={lang === 'pt' ? 'page' : undefined}>Português</a>
+        <a href={`${b}/en/`} aria-current={lang === 'en' ? 'page' : undefined}>English</a>
       </div>
     </div>
 
@@ -191,7 +193,7 @@ const ano = new Date().getFullYear();
         </div>
         <div class="sobre">
           <figure class="sobre__retrato surgir" style="margin:0">
-            <img src="/marca/retrato.webp" width="1200" height="1195" alt={t.retratoAlt} loading="lazy" decoding="async" />
+            <img src={`${b}/marca/retrato.webp`} width="1200" height="1195" alt={t.retratoAlt} loading="lazy" decoding="async" />
           </figure>
           <div class="sobre__texto surgir">
             <p class="sobre__abertura">{t.bioAbertura}</p>
@@ -221,7 +223,7 @@ const ano = new Date().getFullYear();
       </section>
 
       <div class="listras" aria-hidden="true">
-        <img src="/marca/listras.svg" alt="" width="1612" height="1000" loading="lazy" decoding="async" />
+        <img src={`${b}/marca/listras.svg`} alt="" width="1612" height="1000" loading="lazy" decoding="async" />
       </div>
     </main>
 

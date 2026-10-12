@@ -17,7 +17,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 ORIGEM = Path(os.environ.get('FOTOS_ORIGEM', RAIZ / 'fotos-originais'))
 DESTINO = RAIZ / 'site/public/fotos'
 DADOS = RAIZ / 'site/src/data'
-TEMAS = ['autoral', 'moda-joias', 'arquitetura-hoteis', 'publicidade', 'retratos']
+TEMAS = ['autoral', 'moda', 'arquitetura-hoteis', 'publicidade', 'retratos']
 LARGURAS = [800, 1600, 2400]
 
 ordem_path = DADOS / 'ordem.json'

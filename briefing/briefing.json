@@ -29,7 +29,7 @@
   "ordemSecoes": [
     "Capa (foto em tela cheia + nome)",
     "Autoral",
-    "Moda & Joias",
+    "Moda",
     "Arquitetura & Hotéis",
     "Publicidade",
     "Retratos",
@@ -51,7 +51,7 @@
   },
   "inventarioFotos": {
     "Autoral": 20,
-    "Moda & Joias": 30,
+    "Moda": 30,
     "Arquitetura & Hotéis": 20,
     "Publicidade": 10,
     "Retratos": 9,
