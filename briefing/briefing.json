@@ -30,7 +30,7 @@
     "Capa (foto em tela cheia + nome)",
     "Autoral",
     "Moda",
-    "Arquitetura & Hotéis",
+    "Arquitetura",
     "Publicidade",
     "Retratos",
     "Sobre / Contato"
@@ -52,7 +52,7 @@
   "inventarioFotos": {
     "Autoral": 20,
     "Moda": 30,
-    "Arquitetura & Hotéis": 20,
+    "Arquitetura": 20,
     "Publicidade": 10,
     "Retratos": 9,
     "total": 89

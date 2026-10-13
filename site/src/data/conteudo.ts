@@ -17,7 +17,7 @@ export const contato = {
 export const temas = [
   { id: 'autoral',            pt: 'Autoral',              en: 'Personal Work' },
   { id: 'moda',               pt: 'Moda',                 en: 'Fashion' },
-  { id: 'arquitetura-hoteis', pt: 'Arquitetura & Hotéis', en: 'Architecture & Hotels' },
+  { id: 'arquitetura',        pt: 'Arquitetura',          en: 'Architecture' },
   { id: 'publicidade',        pt: 'Publicidade',          en: 'Advertising' },
   { id: 'retratos',           pt: 'Retratos',             en: 'Portraits' },
 ] as const;
@@ -40,7 +40,7 @@ export const textos = {
     htmlLang: 'pt-BR',
     titulo: 'Daniel Pinheiro — Fotografia',
     descricao:
-      'Portfólio do fotógrafo Daniel Pinheiro: autoral, moda, arquitetura e hotéis, publicidade e retratos. São Paulo, Brasil.',
+      'Portfólio do fotógrafo Daniel Pinheiro: autoral, moda, arquitetura, publicidade e retratos. São Paulo, Brasil.',
     pular: 'Pular para o conteúdo',
     menu: 'Menu',
     fechar: 'Fechar',
@@ -68,7 +68,7 @@ export const textos = {
     htmlLang: 'en',
     titulo: 'Daniel Pinheiro — Photography',
     descricao:
-      'Portfolio of photographer Daniel Pinheiro: personal work, fashion, architecture and hotels, advertising and portraits. São Paulo, Brazil.',
+      'Portfolio of photographer Daniel Pinheiro: personal work, fashion, architecture, advertising and portraits. São Paulo, Brazil.',
     pular: 'Skip to content',
     menu: 'Menu',
     fechar: 'Close',
