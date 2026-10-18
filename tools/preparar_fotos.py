@@ -26,7 +26,7 @@ manifesto = {}
 
 for tema in TEMAS:
     pasta = ORIGEM / tema
-    arquivos = sorted(p.name for p in pasta.glob('*.jp*g')) if pasta.exists() else []
+    arquivos = sorted(p.name for p in pasta.iterdir() if p.suffix.lower() in ('.jpg', '.jpeg', '.tif', '.tiff')) if pasta.exists() else []
     preferida = [n for n in ordem.get(tema, []) if n in arquivos]
     arquivos = preferida + [n for n in arquivos if n not in preferida]
     ordem[tema] = arquivos
