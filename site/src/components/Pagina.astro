@@ -27,7 +27,8 @@ const fotosCapa = capa.flatMap((c) => {
   const f = lista[c.tema]?.find((x) => x.original === c.original);
   return f ? [{ tema: c.tema, id: f.id, foco: c.foco }] : [];
 });
-const ogImagem = fotosCapa[0] ? new URL(src(fotosCapa[0].tema, fotosCapa[0].id, 1600), site).toString() : undefined;
+// Imagem da prévia ao compartilhar o link (WhatsApp, redes): JPG 1200×630, formato que todos leem
+const ogImagem = new URL(`${b}/marca/compartilhar.jpg`, site).toString();
 
 const nav = [
   ...temas.map((tema, i) => ({ href: `#${tema.id}`, label: tema[lang], n: String(i + 1).padStart(2, '0') })),
@@ -54,7 +55,12 @@ const ano = new Date().getFullYear();
     <meta property="og:description" content={t.descricao} />
     <meta property="og:url" content={lang === 'pt' ? urlPt : urlEn} />
     <meta property="og:locale" content={lang === 'pt' ? 'pt_BR' : 'en_US'} />
-    {ogImagem && <meta property="og:image" content={ogImagem} />}
+    <meta property="og:site_name" content="Daniel Pinheiro" />
+    <meta property="og:image" content={ogImagem} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content={ogImagem} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
