@@ -13,6 +13,11 @@ export const contato = {
   instagramLink: 'https://www.instagram.com/daniel_pinheiro_photography/',
 };
 
+// Google Analytics 4: cole aqui o "ID da métrica" (começa com G-). Vazio = desligado.
+export const analytics = {
+  ga4: '',
+};
+
 // Ordem das seções de fotos no site (pasta em site/public/fotos/<id>)
 export const temas = [
   { id: 'autoral',            pt: 'Autoral',              en: 'Personal Work' },

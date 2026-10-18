@@ -1,0 +1,262 @@
+<!doctype html>
+<!--
+  Peças de divulgação do site no Instagram (feed 1080×1350 e stories 1080×1920).
+  Cada <section class="peca" id="..."> vira uma imagem: node tools/divulgacao/gerar.mjs
+  As fotos vêm do próprio site (site/public/fotos) e os recortes de tela de tools/divulgacao/telas.
+-->
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..600;1,300..400&display=block" rel="stylesheet">
+<style>
+  :root { --vermelho: #E22126; --preto: #000; --branco: #fff; --grafite: #3A3A3C; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #888; font-family: 'Jost', sans-serif; color: var(--preto); -webkit-font-smoothing: antialiased; }
+  .peca { position: relative; overflow: hidden; background: var(--branco); margin: 40px; }
+  .feed { width: 1080px; height: 1350px; }
+  .story { width: 1080px; height: 1920px; }
+  .foto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .escuro::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,0) 45%); }
+  .escuro-topo::before { content: ''; position: absolute; inset: 0; z-index: 1; background: linear-gradient(to bottom, rgba(0,0,0,.55) 0%, rgba(0,0,0,0) 30%); }
+  .camada { position: absolute; z-index: 2; }
+
+  /* Assinatura (logo) — cor via --lp-ink; o LP é sempre vermelho */
+  .assinatura svg { width: 100%; height: auto; display: block; }
+  .branca { --lp-ink: #fff; }
+
+  .rotulo { font-size: 26px; letter-spacing: .28em; text-transform: uppercase; font-weight: 500; }
+  .titulo { font-weight: 400; text-transform: uppercase; line-height: .95; letter-spacing: -.01em; }
+  .num { color: var(--vermelho); font-size: 30px; letter-spacing: .2em; font-weight: 500; }
+  .url { font-size: 40px; letter-spacing: .08em; font-weight: 500; }
+  .pilula { display: inline-block; padding: 26px 48px; border-radius: 999px; background: var(--branco); color: var(--preto); }
+  .traco { display: inline-block; width: 90px; height: 6px; background: var(--vermelho); }
+
+  /* Cabeçalho de seção igual ao site: linha, número vermelho, título grande */
+  .cabecalho { border-top: 3px solid currentColor; padding-top: 34px; display: flex; align-items: baseline; gap: 34px; }
+  .cabecalho .titulo { font-size: 128px; }
+
+  /* Telefone com recorte do site */
+  .telefone { position: absolute; z-index: 2; width: 470px; aspect-ratio: 390 / 844; border-radius: 64px; background: #111; padding: 16px; box-shadow: 0 50px 90px rgba(0,0,0,.28); }
+  .telefone img { width: 100%; height: 100%; object-fit: cover; object-position: top; border-radius: 50px; display: block; }
+  .telefone::before { content: ''; position: absolute; top: 30px; left: 50%; transform: translateX(-50%); width: 120px; height: 34px; border-radius: 20px; background: #111; z-index: 3; }
+
+  .listras { position: absolute; background: url('../../site/public/marca/listras.svg') left center / cover no-repeat; }
+  .listras-grafite { position: absolute; background: repeating-linear-gradient(90deg, var(--grafite) 0 34px, transparent 34px 68px); }
+</style>
+</head>
+<body>
+
+<!-- ═════════ CARROSSEL DO FEED (perfil pessoal) ═════════ -->
+
+<!-- 1 · Capa -->
+<section class="peca feed escuro escuro-topo" id="feed-01-capa">
+  <img class="foto" src="../../site/public/fotos/autoral/15-2400.webp" style="object-position: 45% 50%">
+  <div class="camada rotulo" style="top: 80px; left: 80px; color: #fff;">Novo site no ar</div>
+  <div class="camada" style="top: 74px; right: 80px;"><span class="traco"></span></div>
+  <div class="camada assinatura branca" style="left: 80px; right: 80px; bottom: 170px;" data-logo></div>
+  <div class="camada url" style="left: 80px; bottom: 90px; color: #fff; font-weight: 400;">danielpinheiro.com.br</div>
+</section>
+
+<!-- 2 · Autoral -->
+<section class="peca feed" id="feed-02-autoral">
+  <img class="foto" src="../../site/public/fotos/autoral/01-2400.webp" style="height: 1010px; object-position: 50% 50%">
+  <div class="camada" style="left: 80px; right: 80px; bottom: 96px;">
+    <div class="cabecalho"><span class="num">01</span><span class="titulo">Autoral</span></div>
+  </div>
+</section>
+
+<!-- 3 · Moda -->
+<section class="peca feed" id="feed-03-moda">
+  <img class="foto" src="../../site/public/fotos/moda/03-2400.webp" style="height: 1010px; object-position: 50% 30%">
+  <div class="camada" style="left: 80px; right: 80px; bottom: 96px;">
+    <div class="cabecalho"><span class="num">02</span><span class="titulo">Moda</span></div>
+  </div>
+</section>
+
+<!-- 4 · Arquitetura -->
+<section class="peca feed" id="feed-04-arquitetura">
+  <img class="foto" src="../../site/public/fotos/arquitetura/17-2400.webp" style="height: 1010px; object-position: 50% 50%">
+  <div class="camada" style="left: 80px; right: 80px; bottom: 96px;">
+    <div class="cabecalho"><span class="num">03</span><span class="titulo">Arquitetura</span></div>
+  </div>
+</section>
+
+<!-- 5 · Publicidade -->
+<section class="peca feed" id="feed-05-publicidade">
+  <img class="foto" src="../../site/public/fotos/publicidade/08-2400.webp" style="height: 1010px; object-position: 50% 40%">
+  <div class="camada" style="left: 80px; right: 80px; bottom: 96px;">
+    <div class="cabecalho"><span class="num">04</span><span class="titulo">Publicidade</span></div>
+  </div>
+</section>
+
+<!-- 6 · Retratos -->
+<section class="peca feed" id="feed-06-retratos">
+  <img class="foto" src="../../site/public/fotos/retratos/10-2400.webp" style="height: 1010px; object-position: 50% 30%">
+  <div class="camada" style="left: 80px; right: 80px; bottom: 96px;">
+    <div class="cabecalho"><span class="num">05</span><span class="titulo">Retratos</span></div>
+  </div>
+</section>
+
+<!-- 7 · Chamada final -->
+<section class="peca feed" id="feed-07-chamada" style="background: var(--preto); color: #fff;">
+  <div class="listras" style="top: 0; left: 0; right: 0; height: 560px;"></div>
+  <div class="camada assinatura branca" style="left: 80px; right: 80px; top: 690px;" data-logo></div>
+  <div class="camada" style="left: 80px; right: 80px; top: 900px;">
+    <p style="font-size: 46px; font-weight: 300; line-height: 1.3;">Mais de vinte anos de fotografia,<br>agora reunidos em um só lugar.</p>
+  </div>
+  <div class="camada" style="left: 80px; bottom: 96px;"><span class="pilula url">danielpinheiro.com.br</span></div>
+  <div class="camada rotulo" style="right: 80px; bottom: 124px; font-size: 22px;">Link na bio</div>
+</section>
+
+<!-- ═════════ POSTS AVULSOS DO FEED ═════════ -->
+
+<!-- Recorte do site em dois celulares -->
+<section class="peca feed" id="feed-08-recorte">
+  <div class="listras-grafite" style="top: 0; bottom: 0; right: 0; width: 340px; opacity: .9;"></div>
+  <div class="camada rotulo" style="top: 80px; left: 80px;">O site novo</div>
+  <div class="camada" style="top: 74px; left: 470px;"><span class="traco"></span></div>
+  <div class="telefone" style="left: 110px; top: 190px; width: 420px; transform: rotate(-4deg);"><img src="telas/cel-capa.png"></div>
+  <div class="telefone" style="left: 540px; top: 250px; width: 420px; transform: rotate(4deg);"><img src="telas/cel-moda.png"></div>
+  <div class="camada url" style="left: 80px; bottom: 70px;">danielpinheiro.com.br</div>
+</section>
+
+<!-- Mosaico com 9 fotos de todas as seções -->
+<section class="peca feed" id="feed-09-mosaico">
+  <div class="camada" style="inset: 60px 60px auto 60px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;">
+    <img src="../../site/public/fotos/autoral/01-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+    <img src="../../site/public/fotos/moda/03-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+    <img src="../../site/public/fotos/arquitetura/06-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+    <img src="../../site/public/fotos/retratos/10-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover; object-position: 50% 30%">
+    <img src="../../site/public/fotos/autoral/15-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+    <img src="../../site/public/fotos/publicidade/03-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+    <img src="../../site/public/fotos/arquitetura/18-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+    <img src="../../site/public/fotos/moda/01-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+    <img src="../../site/public/fotos/autoral/18-800.webp" style="width:100%; aspect-ratio:1; object-fit:cover">
+  </div>
+  <div class="camada assinatura" style="left: 60px; width: 640px; bottom: 120px;" data-logo></div>
+  <div class="camada url" style="left: 60px; bottom: 50px; font-size: 34px; font-weight: 400;">danielpinheiro.com.br</div>
+  <div class="camada" style="right: 60px; bottom: 64px;"><span class="traco"></span></div>
+</section>
+
+<!-- ═════════ STORIES (pessoal e profissional) ═════════
+     Área livre para o Instagram: 250px no topo e 340px embaixo. -->
+
+<!-- 1 · Véspera (teaser) -->
+<section class="peca story" id="story-01-vespera" style="background: var(--preto); color: #fff;">
+  <div class="listras" style="top: 0; bottom: 0; left: 0; width: 100%; opacity: .16;"></div>
+  <img class="camada" src="../../site/public/marca/monograma-lp.svg" style="width: 460px; left: 310px; top: 560px;">
+  <div class="camada" style="left: 0; right: 0; top: 1210px; text-align: center;">
+    <p class="titulo" style="font-size: 110px;">Amanhã</p>
+    <p class="rotulo" style="margin-top: 40px; font-weight: 400;">algo novo no ar</p>
+  </div>
+</section>
+
+<!-- 2 · Lançamento -->
+<section class="peca story escuro escuro-topo" id="story-02-lancamento">
+  <img class="foto" src="../../site/public/fotos/autoral/15-2400.webp" style="object-position: 47% 50%">
+  <div class="camada rotulo" style="top: 290px; left: 80px; color: #fff;">Novo site no ar</div>
+  <div class="camada assinatura branca" style="left: 80px; right: 80px; top: 360px;" data-logo></div>
+  <div class="camada" style="left: 80px; bottom: 420px;"><span class="pilula url">danielpinheiro.com.br</span></div>
+</section>
+
+<!-- 3 · Recorte do site no celular -->
+<section class="peca story" id="story-03-recorte">
+  <div class="listras" style="top: 0; left: 0; right: 0; height: 760px;"></div>
+  <div class="telefone" style="left: 290px; top: 300px; width: 500px;"><img src="telas/cel-autoral.png"></div>
+  <div class="camada" style="left: 80px; right: 80px; bottom: 380px; text-align: center;">
+    <p class="rotulo">22 fotos autorais · 5 seções</p>
+    <p class="url" style="margin-top: 26px;">danielpinheiro.com.br</p>
+  </div>
+</section>
+
+<!-- 4 · Moda -->
+<section class="peca story" id="story-04-moda">
+  <img class="foto" src="../../site/public/fotos/moda/03-2400.webp" style="height: 1300px; object-position: 50% 30%">
+  <div class="camada" style="left: 80px; right: 80px; top: 1360px;">
+    <div class="cabecalho"><span class="num">02</span><span class="titulo">Moda</span></div>
+    <p class="rotulo" style="margin-top: 36px; font-size: 24px; font-weight: 400;">Veja o ensaio completo no site</p>
+  </div>
+</section>
+
+<!-- 5 · Arquitetura -->
+<section class="peca story" id="story-05-arquitetura">
+  <img class="foto" src="../../site/public/fotos/arquitetura/18-2400.webp" style="height: 1300px; object-position: 50% 45%">
+  <div class="camada" style="left: 80px; right: 80px; top: 1360px;">
+    <div class="cabecalho"><span class="num">03</span><span class="titulo">Arquitetura</span></div>
+    <p class="rotulo" style="margin-top: 36px; font-size: 24px; font-weight: 400;">Hotéis, casas e espaços</p>
+  </div>
+</section>
+
+<!-- 6 · Retratos -->
+<section class="peca story" id="story-06-retratos">
+  <img class="foto" src="../../site/public/fotos/retratos/07-2400.webp" style="height: 1300px; object-position: 50% 50%">
+  <div class="camada" style="left: 80px; right: 80px; top: 1360px;">
+    <div class="cabecalho"><span class="num">05</span><span class="titulo">Retratos</span></div>
+    <p class="rotulo" style="margin-top: 36px; font-size: 24px; font-weight: 400;">Pessoas e suas histórias</p>
+  </div>
+</section>
+
+<!-- 7 · Autoral -->
+<section class="peca story" id="story-07-autoral" style="background: var(--preto); color: #fff;">
+  <img class="foto" src="../../site/public/fotos/autoral/01-2400.webp" style="height: 1300px; object-position: 50% 50%">
+  <div class="camada" style="left: 80px; right: 80px; top: 1360px;">
+    <div class="cabecalho"><span class="num">01</span><span class="titulo">Autoral</span></div>
+    <p class="rotulo" style="margin-top: 36px; font-size: 24px; font-weight: 400;">O olhar pessoal</p>
+  </div>
+</section>
+
+<!-- 8 · Sobre -->
+<section class="peca story" id="story-08-sobre">
+  <div class="listras-grafite" style="top: 0; bottom: 0; left: 0; width: 300px; opacity: .9;"></div>
+  <div class="telefone" style="left: 370px; top: 290px; width: 500px;"><img src="telas/cel-sobre.png"></div>
+  <div class="camada" style="left: 340px; right: 60px; bottom: 380px; text-align: center;">
+    <p class="rotulo">Conheça minha trajetória</p>
+    <p class="url" style="margin-top: 26px;">danielpinheiro.com.br</p>
+  </div>
+</section>
+
+<!-- 9 · Enquete (colocar o adesivo de enquete na área branca) -->
+<section class="peca story" id="story-09-enquete">
+  <div class="camada" style="left: 80px; right: 80px; top: 300px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+    <img src="../../site/public/fotos/autoral/01-800.webp" style="width:100%; aspect-ratio: 1; object-fit:cover">
+    <img src="../../site/public/fotos/moda/03-800.webp" style="width:100%; aspect-ratio: 1; object-fit:cover">
+    <img src="../../site/public/fotos/arquitetura/06-800.webp" style="width:100%; aspect-ratio: 1; object-fit:cover">
+    <img src="../../site/public/fotos/retratos/10-800.webp" style="width:100%; aspect-ratio: 1; object-fit:cover; object-position: 50% 30%">
+  </div>
+  <div class="camada" style="left: 80px; right: 80px; top: 1340px;">
+    <p class="titulo" style="font-size: 76px;">Qual é a sua<br>seção favorita?</p>
+    <div style="margin-top: 26px;"><span class="traco"></span></div>
+  </div>
+</section>
+
+<!-- 10 · Perfil profissional (bilíngue, com o site no computador) -->
+<section class="peca story" id="story-10-profissional" style="background: var(--preto); color: #fff;">
+  <div class="listras" style="top: 0; left: 0; right: 0; height: 640px; opacity: .9;"></div>
+  <div class="camada" style="left: 110px; right: 110px; top: 460px;">
+    <div style="background: #1b1b1b; border-radius: 26px 26px 0 0; padding: 22px 22px 0; box-shadow: 0 40px 80px rgba(0,0,0,.5);">
+      <img src="telas/pc-capa.png" style="width: 100%; display: block; border-radius: 8px 8px 0 0;">
+    </div>
+    <div style="height: 34px; background: #2a2a2a; border-radius: 0 0 30px 30px; margin: 0 -30px;"></div>
+  </div>
+  <div class="camada" style="left: 80px; right: 80px; top: 1110px;">
+    <p class="rotulo" style="font-weight: 400;">Novo site · New website</p>
+    <p class="titulo" style="font-size: 96px; margin-top: 30px;">Portfólio<br>completo</p>
+  </div>
+  <div class="camada" style="left: 80px; bottom: 360px;"><span class="pilula url">danielpinheiro.com.br</span></div>
+</section>
+
+<!-- 11 · Capa do Destaque "Site" no perfil (o Instagram mostra só o círculo central) -->
+<section class="peca story" id="story-11-capa-destaque" style="background: var(--preto);">
+  <img class="camada" src="../../site/public/marca/monograma-lp.svg" style="width: 420px; left: 330px; top: 740px;">
+</section>
+
+<script>
+  // Insere a assinatura (SVG) onde houver data-logo, para poder trocar a cor do texto.
+  fetch('../../site/public/marca/assinatura.svg').then(r => r.text()).then(svg => {
+    document.querySelectorAll('[data-logo]').forEach(el => { el.innerHTML = svg; });
+    document.body.dataset.pronto = '1';
+  });
+</script>
+</body>
+</html>

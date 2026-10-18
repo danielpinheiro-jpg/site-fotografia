@@ -6,7 +6,7 @@
 import '../styles/global.css';
 import assinatura from '../../public/marca/assinatura.svg?raw';
 import fotos from '../data/fotos.json';
-import { capa, clientes, contato, temas, textos, type Lang } from '../data/conteudo';
+import { analytics, capa, clientes, contato, temas, textos, type Lang } from '../data/conteudo';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -77,6 +77,17 @@ const ano = new Date().getFullYear();
       url: urlPt,
       sameAs: [contato.instagramLink],
     })} />
+    {analytics.ga4 && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${analytics.ga4}`}></script>
+        <script is:inline define:vars={{ id: analytics.ga4 }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', id);
+        </script>
+      </>
+    )}
   </head>
   <body>
     <a class="pular" href="#conteudo">{t.pular}</a>
