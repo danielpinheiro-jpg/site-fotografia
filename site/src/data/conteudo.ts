@@ -15,7 +15,7 @@ export const contato = {
 
 // Google Analytics 4: cole aqui o "ID da métrica" (começa com G-). Vazio = desligado.
 export const analytics = {
-  ga4: '',
+  ga4: 'G-V4Z3Q6Q7K8',
 };
 
 // Ordem das seções de fotos no site (pasta em site/public/fotos/<id>)
