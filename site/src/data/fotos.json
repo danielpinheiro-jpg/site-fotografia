@@ -142,174 +142,210 @@
     },
     {
       "id": "02",
-      "w": 2500,
-      "h": 1664,
-      "original": "0964_danielpinheiro©_danielpinheiro©.jpg"
+      "w": 600,
+      "h": 602,
+      "original": "daniel_11.jpg"
     },
     {
       "id": "03",
-      "w": 2500,
-      "h": 1664,
-      "original": "1410_danielpinheiro©_danielpinheiro©.jpg"
-    },
-    {
-      "id": "04",
-      "w": 2500,
-      "h": 1664,
-      "original": "DP_lisht-02_danielpinheiro©.jpg"
-    },
-    {
-      "id": "05",
-      "w": 2500,
-      "h": 2500,
-      "original": "DanielPinheiro-000001-Edit_danielpinheiro©.jpg"
-    },
-    {
-      "id": "06",
-      "w": 2500,
-      "h": 1663,
-      "original": "LISHT 0009_danielpinheiro©.jpg"
-    },
-    {
-      "id": "07",
-      "w": 2500,
-      "h": 1664,
-      "original": "Rev Oi 1_danielpinheiro©.jpg"
-    },
-    {
-      "id": "08",
-      "w": 2500,
-      "h": 1664,
-      "original": "_DPN0930 ok_danielpinheiro©.jpg"
-    },
-    {
-      "id": "09",
-      "w": 2500,
-      "h": 1664,
-      "original": "_DPN9712_1_danielpinheiro©.jpg"
-    },
-    {
-      "id": "10",
-      "w": 1667,
-      "h": 2500,
-      "original": "_DSC3251_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
-    },
-    {
-      "id": "11",
-      "w": 1667,
-      "h": 2500,
-      "original": "_DSC3260_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
-    },
-    {
-      "id": "12",
-      "w": 1667,
-      "h": 2500,
-      "original": "_DSC3276_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
-    },
-    {
-      "id": "13",
-      "w": 1940,
-      "h": 2500,
-      "original": "_DSC3606_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
-    },
-    {
-      "id": "14",
-      "w": 1796,
-      "h": 2500,
-      "original": "_DSC3614_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
-    },
-    {
-      "id": "15",
-      "w": 1796,
-      "h": 2500,
-      "original": "_DSC3617_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
-    },
-    {
-      "id": "16",
-      "w": 2500,
-      "h": 1818,
-      "original": "capa2_danielpinheiro©.jpg"
-    },
-    {
-      "id": "17",
       "w": 2471,
       "h": 2500,
       "original": "daniel_6_danielpinheiro©.jpg"
     },
     {
+      "id": "04",
+      "w": 600,
+      "h": 600,
+      "original": "daniel_21.jpg"
+    },
+    {
+      "id": "05",
+      "w": 600,
+      "h": 600,
+      "original": "daniel_4.jpg"
+    },
+    {
+      "id": "06",
+      "w": 600,
+      "h": 601,
+      "original": "daniel_13.jpg"
+    },
+    {
+      "id": "07",
+      "w": 600,
+      "h": 605,
+      "original": "daniel_14.jpg"
+    },
+    {
+      "id": "08",
+      "w": 600,
+      "h": 609,
+      "original": "daniel_16.jpg"
+    },
+    {
+      "id": "09",
+      "w": 2500,
+      "h": 1664,
+      "original": "0964_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "10",
+      "w": 2500,
+      "h": 1664,
+      "original": "1410_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "11",
+      "w": 2500,
+      "h": 1664,
+      "original": "DP_lisht-02_danielpinheiro©.jpg"
+    },
+    {
+      "id": "12",
+      "w": 2500,
+      "h": 2500,
+      "original": "DanielPinheiro-000001-Edit_danielpinheiro©.jpg"
+    },
+    {
+      "id": "13",
+      "w": 2500,
+      "h": 1663,
+      "original": "LISHT 0009_danielpinheiro©.jpg"
+    },
+    {
+      "id": "14",
+      "w": 2500,
+      "h": 1664,
+      "original": "Rev Oi 1_danielpinheiro©.jpg"
+    },
+    {
+      "id": "15",
+      "w": 2500,
+      "h": 1664,
+      "original": "_DPN0930 ok_danielpinheiro©.jpg"
+    },
+    {
+      "id": "16",
+      "w": 2500,
+      "h": 1664,
+      "original": "_DPN9712_1_danielpinheiro©.jpg"
+    },
+    {
+      "id": "17",
+      "w": 1667,
+      "h": 2500,
+      "original": "_DSC3251_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
       "id": "18",
+      "w": 1667,
+      "h": 2500,
+      "original": "_DSC3260_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "19",
+      "w": 1667,
+      "h": 2500,
+      "original": "_DSC3276_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "20",
+      "w": 1940,
+      "h": 2500,
+      "original": "_DSC3606_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "21",
+      "w": 1796,
+      "h": 2500,
+      "original": "_DSC3614_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "22",
+      "w": 1796,
+      "h": 2500,
+      "original": "_DSC3617_olsen_k_danielpinheiro©_danielpinheiro©.jpg"
+    },
+    {
+      "id": "23",
+      "w": 2500,
+      "h": 1818,
+      "original": "capa2_danielpinheiro©.jpg"
+    },
+    {
+      "id": "24",
       "w": 2500,
       "h": 1944,
       "original": "daniel_pinheiro001_danielpinheiro©.jpg"
     },
     {
-      "id": "19",
+      "id": "25",
       "w": 2500,
       "h": 1944,
       "original": "daniel_pinheiro003_danielpinheiro©.jpg"
     },
     {
-      "id": "20",
+      "id": "26",
       "w": 2500,
       "h": 1944,
       "original": "daniel_pinheiro008_danielpinheiro©.jpg"
     },
     {
-      "id": "21",
+      "id": "27",
       "w": 2500,
       "h": 1944,
       "original": "daniel_pinheiro009_danielpinheiro©.jpg"
     },
     {
-      "id": "22",
+      "id": "28",
       "w": 2500,
       "h": 1944,
       "original": "daniel_pinheiro010_danielpinheiro©.jpg"
     },
     {
-      "id": "23",
+      "id": "29",
       "w": 2500,
       "h": 1668,
       "original": "elegtrop0_danielpinheiro©.jpg"
     },
     {
-      "id": "24",
+      "id": "30",
       "w": 2033,
       "h": 2500,
       "original": "foto01 frente postal_danielpinheiro©.jpg"
     },
     {
-      "id": "25",
+      "id": "31",
       "w": 2452,
       "h": 2500,
       "original": "gisele13_danielpinheiro©.jpg"
     },
     {
-      "id": "26",
+      "id": "32",
       "w": 2500,
       "h": 1677,
       "original": "gisele14_danielpinheiro©.jpg"
     },
     {
-      "id": "27",
+      "id": "33",
       "w": 1668,
       "h": 2500,
       "original": "gisele1_danielpinheiro©.jpg"
     },
     {
-      "id": "28",
+      "id": "34",
       "w": 2486,
       "h": 2500,
       "original": "pasargada_danielpinheiro©_9_danielpinheiro©.jpg"
     },
     {
-      "id": "29",
+      "id": "35",
       "w": 2252,
       "h": 2500,
       "original": "perola_dp_danielpinheiro©.jpg"
     },
     {
-      "id": "30",
+      "id": "36",
       "w": 2500,
       "h": 2168,
       "original": "vero_praia08_danielpinheiro©.jpg"

@@ -31,8 +31,8 @@ export const capa = [
 ];
 
 export const clientes = [
-  'Fasano', 'Casas Brancas', 'Novotel', 'Ibis', 'Melitta', 'Wella',
-  'Natura', 'Cacau Show', 'Raia', 'MSD', 'Nova Escola',
+  'Fasano', 'Accor', 'Bourbon', 'Vivara', 'Melitta', 'Wella', 'Natura',
+  'Cacau Show', 'Raia', 'MSD', 'Diageo', 'Sony & BMG', 'Tátil',
 ];
 
 export const textos = {
@@ -52,7 +52,7 @@ export const textos = {
     verFoto: 'Ampliar foto',
     capaLegenda: 'Fotografia',
     clientes: 'Clientes',
-    bioAbertura: 'Daniel Pinheiro (1971, São Paulo, SP)',
+    bioAbertura: 'Daniel Pinheiro',
     bio: [
       'Há mais de vinte anos, Daniel Pinheiro transforma luz em narrativa. Sua fotografia nasceu do encontro com o mestre Walter Firmo e se desenvolveu entre os retratos, a publicidade, a moda, a arquitetura, a gastronomia e os projetos documentais. Ao longo dessa trajetória, fotografou para marcas, revistas e instituições nacionais e internacionais, realizou exposições autorais e dirigiu a fotografia de filmes documentais, sempre mantendo um princípio que atravessa todo o seu trabalho: fotografar pessoas, lugares e objetos com o mesmo rigor estético e o mesmo respeito pelo que cada imagem representa.',
       'Sua assinatura está na luz natural, nas cores, nas texturas e na construção de imagens que revelam presença antes de espetáculo. Mais do que registrar cenas, Daniel busca criar fotografias que permaneçam relevantes com o passar do tempo, unindo precisão técnica, sensibilidade artística e narrativa visual.',
@@ -80,7 +80,7 @@ export const textos = {
     verFoto: 'Enlarge photo',
     capaLegenda: 'Photography',
     clientes: 'Clients',
-    bioAbertura: 'Daniel Pinheiro (b. 1971, São Paulo, Brazil)',
+    bioAbertura: 'Daniel Pinheiro',
     bio: [
       'For more than twenty years, Daniel Pinheiro has been turning light into narrative. His photography was born from his encounter with the master Walter Firmo and grew across portraiture, advertising, fashion, architecture, food and documentary projects. Along the way he has photographed for brands, magazines and institutions in Brazil and abroad, held solo exhibitions and served as director of photography on documentary films — always guided by one principle that runs through all of his work: to photograph people, places and objects with the same aesthetic rigor and the same respect for what each image represents.',
       'His signature lies in natural light, in color, in texture, and in building images that reveal presence before spectacle. More than recording scenes, Daniel seeks to create photographs that remain relevant over time, combining technical precision, artistic sensibility and visual storytelling.',
