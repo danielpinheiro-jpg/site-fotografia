@@ -43,6 +43,13 @@
 
   .listras { position: absolute; background: url('../../site/public/marca/listras.svg') left center / cover no-repeat; }
   .listras-grafite { position: absolute; background: repeating-linear-gradient(90deg, var(--grafite) 0 34px, transparent 34px 68px); }
+
+  /* Carrosséis temáticos: foto inteira, sem corte, sobre branco (como a galeria do site) */
+  .moldura { position: absolute; left: 70px; right: 70px; top: 70px; height: 1080px; display: flex; align-items: center; justify-content: center; }
+  .moldura img { max-width: 100%; max-height: 100%; display: block; }
+  .rodape { position: absolute; left: 70px; right: 70px; bottom: 70px; display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
+  .rodape .rotulo { font-size: 22px; }
+  .legenda { font-size: 24px; font-weight: 300; letter-spacing: .04em; color: #5E5E63; }
 </style>
 </head>
 <body>
@@ -249,6 +256,97 @@
 <!-- 11 · Capa do Destaque "Site" no perfil (o Instagram mostra só o círculo central) -->
 <section class="peca story" id="story-11-capa-destaque" style="background: var(--preto);">
   <img class="camada" src="../../site/public/marca/monograma-lp.svg" style="width: 420px; left: 330px; top: 740px;">
+</section>
+
+
+<!-- ═════════ CARROSSEL ARQUITETURA (post 2) ═════════ -->
+<section class="peca feed escuro" id="arq-01-capa-a">
+  <img class="foto" src="../../site/public/fotos/arquitetura/18-2400.webp" style="object-position: 50% 45%">
+  <div class="camada" style="inset: 0; background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.35) 30%, rgba(0,0,0,0) 50%);"></div>
+  <div class="camada" style="left: 80px; right: 80px; bottom: 96px; color: #fff;">
+    <p class="rotulo" style="font-weight: 400; margin-bottom: 30px;">Hotéis, casas e espaços</p>
+    <div class="cabecalho"><span class="num">03</span><span class="titulo">Arquitetura</span></div>
+  </div>
+</section>
+<section class="peca feed" id="arq-01-capa-b" style="background: var(--preto); color: #fff;">
+  <div class="listras" style="top: 0; left: 0; right: 0; height: 330px;"></div>
+  <img class="camada" src="../../site/public/fotos/arquitetura/01-2400.webp" style="left: 80px; right: 80px; top: 250px; width: 920px; height: 760px; object-fit: cover; object-position: 50% 50%;">
+  <div class="camada" style="left: 80px; right: 80px; bottom: 90px;">
+    <div class="cabecalho"><span class="num">03</span><span class="titulo" style="font-size: 112px;">Arquitetura</span></div>
+    <p class="rotulo" style="font-weight: 400; margin-top: 26px; color: #fff;">Hotéis, casas e espaços</p>
+  </div>
+</section>
+<section class="peca feed" id="arq-02">
+  <div class="moldura"><img src="../../site/public/fotos/arquitetura/06-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">03</span>Arquitetura</span><span class="legenda">Fasano Angra dos Reis</span></div>
+</section>
+<section class="peca feed" id="arq-03">
+  <div class="moldura"><img src="../../site/public/fotos/arquitetura/12-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">03</span>Arquitetura</span><span class="legenda">Casas Brancas</span></div>
+</section>
+<section class="peca feed" id="arq-04">
+  <div class="moldura"><img src="../../site/public/fotos/arquitetura/08-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">03</span>Arquitetura</span><span class="legenda">Novotel Cusco</span></div>
+</section>
+<section class="peca feed" id="arq-05">
+  <div class="moldura"><img src="../../site/public/fotos/arquitetura/17-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">03</span>Arquitetura</span><span class="legenda">Casas Brancas</span></div>
+</section>
+<section class="peca feed" id="arq-06">
+  <div class="moldura"><img src="../../site/public/fotos/arquitetura/04-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">03</span>Arquitetura</span><span class="legenda">Fasano Angra dos Reis</span></div>
+</section>
+<section class="peca feed" id="arq-07-chamada" style="background: var(--preto); color: #fff;">
+  <div class="listras" style="top: 0; left: 0; right: 0; height: 560px;"></div>
+  <div class="camada assinatura branca" style="left: 80px; right: 80px; top: 690px;" data-logo></div>
+  <div class="camada" style="left: 80px; right: 80px; top: 900px;"><p style="font-size: 46px; font-weight: 300; line-height: 1.3;">Hotéis, casas e espaços.<br>Vinte imagens na seção Arquitetura do site.</p></div>
+  <div class="camada" style="left: 80px; bottom: 96px;"><span class="pilula url">danielpinheiro.com.br</span></div>
+  <div class="camada rotulo" style="right: 80px; bottom: 124px; font-size: 22px;">Link na bio</div>
+</section>
+
+<!-- ═════════ CARROSSEL RETRATOS (post 3) ═════════ -->
+<section class="peca feed escuro" id="ret-01-capa-a">
+  <img class="foto" src="../../site/public/fotos/retratos/07-2400.webp" style="object-position: 50% 50%">
+  <div class="camada" style="inset: 0; background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.35) 30%, rgba(0,0,0,0) 50%);"></div>
+  <div class="camada" style="left: 80px; right: 80px; bottom: 96px; color: #fff;">
+    <p class="rotulo" style="font-weight: 400; margin-bottom: 30px;">Pessoas e suas histórias</p>
+    <div class="cabecalho"><span class="num">05</span><span class="titulo">Retratos</span></div>
+  </div>
+</section>
+<section class="peca feed" id="ret-01-capa-b" style="background: var(--preto); color: #fff;">
+  <div class="listras" style="top: 0; left: 0; right: 0; height: 330px;"></div>
+  <img class="camada" src="../../site/public/fotos/retratos/03-2400.webp" style="left: 80px; right: 80px; top: 250px; width: 920px; height: 760px; object-fit: cover; object-position: 40% 40%;">
+  <div class="camada" style="left: 80px; right: 80px; bottom: 90px;">
+    <div class="cabecalho"><span class="num">05</span><span class="titulo" style="font-size: 112px;">Retratos</span></div>
+    <p class="rotulo" style="font-weight: 400; margin-top: 26px; color: #fff;">Pessoas e suas histórias</p>
+  </div>
+</section>
+<section class="peca feed" id="ret-02">
+  <div class="moldura"><img src="../../site/public/fotos/retratos/10-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">05</span>Retratos</span><span class="legenda"></span></div>
+</section>
+<section class="peca feed" id="ret-03">
+  <div class="moldura"><img src="../../site/public/fotos/retratos/05-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">05</span>Retratos</span><span class="legenda"></span></div>
+</section>
+<section class="peca feed" id="ret-04">
+  <div class="moldura"><img src="../../site/public/fotos/retratos/11-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">05</span>Retratos</span><span class="legenda"></span></div>
+</section>
+<section class="peca feed" id="ret-05">
+  <div class="moldura"><img src="../../site/public/fotos/retratos/13-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">05</span>Retratos</span><span class="legenda"></span></div>
+</section>
+<section class="peca feed" id="ret-06">
+  <div class="moldura"><img src="../../site/public/fotos/retratos/12-2400.webp"></div>
+  <div class="rodape"><span class="rotulo"><span class="num" style="font-size:22px; margin-right:18px;">05</span>Retratos</span><span class="legenda"></span></div>
+</section>
+<section class="peca feed" id="ret-07-chamada" style="background: var(--preto); color: #fff;">
+  <div class="listras" style="top: 0; left: 0; right: 0; height: 560px;"></div>
+  <div class="camada assinatura branca" style="left: 80px; right: 80px; top: 690px;" data-logo></div>
+  <div class="camada" style="left: 80px; right: 80px; top: 900px;"><p style="font-size: 46px; font-weight: 300; line-height: 1.3;">Pessoas e suas histórias.<br>Treze retratos no site.</p></div>
+  <div class="camada" style="left: 80px; bottom: 96px;"><span class="pilula url">danielpinheiro.com.br</span></div>
+  <div class="camada rotulo" style="right: 80px; bottom: 124px; font-size: 22px;">Link na bio</div>
 </section>
 
 <script>
